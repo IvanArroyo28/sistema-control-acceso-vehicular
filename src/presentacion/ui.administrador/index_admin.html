@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Administrador</title>
+    <link rel="stylesheet" href="styles_admin.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Historial del Portón</h1>
+
+    <button id="recargar" class="reload-btn">🔄 Recargar</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Acción</th>
+                <th>Mensaje</th>
+                <th>Fecha y hora</th>
+            </tr>
+        </thead>
+        <tbody id="tablaHistorial">
+            <tr>
+                <td colspan="3" class="loading">Cargando datos...</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

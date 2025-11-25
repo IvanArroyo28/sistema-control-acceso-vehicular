@@ -1,10 +1,28 @@
+#class CerrarPortonUseCase:
+#    def __init__(self, adapter):
+#        self.adapter = adapter
+#
+#    def ejecutar(self):
+#        success, message = self.adapter.cerrar()
+#        return {
+#            "exito": success,
+#            "mensaje": message
+#        }
+
+
+from src.infraestructura.persistence.repositories.porton_eventos_repo import PortonEventosRepo
+
 class CerrarPortonUseCase:
     def __init__(self, adapter):
         self.adapter = adapter
+        self.repo = PortonEventosRepo()
 
     def ejecutar(self):
-        success, message = self.adapter.cerrar()
+        exito, mensaje = self.adapter.cerrar()
+        self.repo.agregar_evento("CERRAR", mensaje)
+
         return {
-            "exito": success,
-            "mensaje": message
+            "exito": exito,
+            "mensaje": mensaje,
+            "modo": "SIMULACION"  # se reemplaza luego por Config
         }

@@ -14,7 +14,7 @@
 
         .card {
             background: white;
-            width: 420px;
+            width: 480px;
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -35,20 +35,9 @@
             cursor: pointer;
         }
 
-        .open-btn {
-            background: #28a745;
-            color: white;
-        }
-
-        .close-btn {
-            background: #dc3545;
-            color: white;
-        }
-
-        .state-btn {
-            background: #007bff;
-            color: white;
-        }
+        .open-btn { background: #28a745; color: white; }
+        .close-btn { background: #dc3545; color: white; }
+        .state-btn { background: #007bff; color: white; }
 
         #estado {
             margin-top: 15px;
@@ -65,6 +54,31 @@
             font-weight: bold;
             color: #555;
         }
+
+        /* Tabla bonita */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background: white;
+            font-size: 14px;
+        }
+
+        table, th, td {
+            border: 1px solid #dcdcdc;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+            padding: 8px;
+        }
+
+        td {
+            padding: 6px;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -79,6 +93,20 @@
     <button class="state-btn" onclick="obtenerEstado()">📌 Consultar Estado</button>
 
     <div id="estado">Estado: ---</div>
+
+    <h3 style="margin-top:20px;">📜 Historial</h3>
+
+    <table id="tablaHistorial">
+        <thead>
+            <tr>
+                <th>Acción</th>
+                <th>Mensaje</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
 </div>
 
 <script>
@@ -90,6 +118,8 @@
 
         document.getElementById("estado").innerText =
             "Estado: " + (data.mensaje || "Desconocido");
+
+        cargarHistorial();
     }
 
     async function cerrarPorton() {
@@ -98,6 +128,8 @@
 
         document.getElementById("estado").innerText =
             "Estado: " + (data.mensaje || "Desconocido");
+
+        cargarHistorial();
     }
 
     async function obtenerEstado() {
@@ -120,13 +152,32 @@
     async function cargarModo() {
         const res = await fetch(`${URL}/porton/estado`);
         const data = await res.json();
-
         actualizarModo(data.modo);
     }
 
-    cargarModo();
-</script>
+    async function cargarHistorial() {
+        const res = await fetch(`${URL}/porton/historial`);
+        const data = await res.json();
 
+        const tbody = document.querySelector("#tablaHistorial tbody");
+        tbody.innerHTML = "";
+
+        data.reverse().forEach(evento => {
+            const fila = document.createElement("tr");
+
+            fila.innerHTML = `
+                <td>${evento.accion}</td>
+                <td>${evento.mensaje}</td>
+                <td>${new Date(evento.fecha).toLocaleString()}</td>
+            `;
+
+            tbody.appendChild(fila);
+        });
+    }
+
+    cargarModo();
+    cargarHistorial();
+</script>
 
 </body>
 </html>
