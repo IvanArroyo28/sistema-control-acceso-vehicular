@@ -7,6 +7,11 @@ from src.infraestructura.adapters.porton.simulated_porton_adapter import Simulat
 
 from src.crosscutting.config import Config
 
+from src.aplicacion.usecases.estado_porton import EstadoPortonUseCase
+
+#para consultar historial
+from src.infraestructura.persistence.repositories.porton_eventos_repo import PortonEventosRepo
+
 router = APIRouter(prefix="/porton", tags=["Portón"])
 
 
@@ -30,3 +35,18 @@ def cerrar_porton():
     adapter = get_adapter()
     use_case = CerrarPortonUseCase(adapter)
     return use_case.ejecutar()
+
+@router.get("/estado")
+def obtener_estado_porton():
+    adapter = get_adapter()
+    use_case = EstadoPortonUseCase(adapter)
+    return use_case.ejecutar()
+
+#consultar historial
+@router.get("/historial")
+def historial_porton():
+    repo = PortonEventosRepo()
+    return repo.obtener_eventos()
+
+
+

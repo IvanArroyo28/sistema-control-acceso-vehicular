@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Control del Portón</title>
+    <style>
+        body {
+            background: #f0f2f5;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+        }
+
+        .card {
+            background: white;
+            width: 420px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .open-btn {
+            background: #28a745;
+            color: white;
+        }
+
+        .close-btn {
+            background: #dc3545;
+            color: white;
+        }
+
+        .state-btn {
+            background: #007bff;
+            color: white;
+        }
+
+        #estado {
+            margin-top: 15px;
+            padding: 12px;
+            background: #e9ecef;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        #modo {
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Panel del Vigilante</h2>
+
+    <div id="modo">Cargando modo...</div>
+
+    <button class="open-btn" onclick="abrirPorton()">🔓 Abrir Portón</button>
+    <button class="close-btn" onclick="cerrarPorton()">🔒 Cerrar Portón</button>
+    <button class="state-btn" onclick="obtenerEstado()">📌 Consultar Estado</button>
+
+    <div id="estado">Estado: ---</div>
+</div>
+
+<script>
+    const URL = "http://127.0.0.1:8000";
+
+    async function abrirPorton() {
+        const res = await fetch(`${URL}/porton/abrir`, { method: "POST" });
+        const data = await res.json();
+
+        document.getElementById("estado").innerText =
+            "Estado: " + (data.mensaje || "Desconocido");
+    }
+
+    async function cerrarPorton() {
+        const res = await fetch(`${URL}/porton/cerrar`, { method: "POST" });
+        const data = await res.json();
+
+        document.getElementById("estado").innerText =
+            "Estado: " + (data.mensaje || "Desconocido");
+    }
+
+    async function obtenerEstado() {
+        const res = await fetch(`${URL}/porton/estado`);
+        const data = await res.json();
+
+        document.getElementById("estado").innerText =
+            "Estado: " + (data.mensaje || "Desconocido");
+
+        actualizarModo(data.modo);
+    }
+
+    function actualizarModo(modo) {
+        document.getElementById("modo").innerText =
+            modo === "SIMULACION"
+            ? "🟡 Modo SIMULACIÓN"
+            : "🟢 Modo REAL";
+    }
+
+    async function cargarModo() {
+        const res = await fetch(`${URL}/porton/estado`);
+        const data = await res.json();
+
+        actualizarModo(data.modo);
+    }
+
+    cargarModo();
+</script>
+
+
+</body>
+</html>

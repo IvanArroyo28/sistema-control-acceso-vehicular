@@ -9,3 +9,7 @@ class PortonPort(ABC):
     @abstractmethod
     def cerrar(self):
         pass
+
+    @abstractmethod
+    def estado(self):
+        pass

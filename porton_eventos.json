@@ -1,0 +1,187 @@
+[
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T01:54:55.263741"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T01:54:56.536260"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T01:54:57.250202"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T01:54:57.707764"
+    },
+    {
+        "accion": "CERRAR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n cerrado",
+        "fecha": "2025-11-25T01:54:58.631517"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T01:55:01.972577"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T01:55:04.397629"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T01:55:04.880158"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T01:55:05.261236"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T01:55:05.369504"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T01:55:06.458992"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:06:02.887745"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:06:04.270410"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:06:59.326001"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:07:01.106658"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:07:02.174461"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:07:03.360188"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:07:19.976675"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:07:27.489485"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:10:38.771029"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:10:40.218766"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:10:54.660613"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:11:08.789970"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:11:15.337707"
+    },
+    {
+        "accion": "CERRAR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n cerrado",
+        "fecha": "2025-11-25T02:11:24.826848"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:13:08.924630"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:18:49.050102"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:18:50.716816"
+    },
+    {
+        "accion": "CERRAR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n cerrado",
+        "fecha": "2025-11-25T02:18:51.697631"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:18:53.913016"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:21:13.073447"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:21:13.999217"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:21:14.971665"
+    },
+    {
+        "accion": "CERRAR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n cerrado",
+        "fecha": "2025-11-25T02:21:15.927151"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:23:53.208599"
+    },
+    {
+        "accion": "ABRIR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n abierto",
+        "fecha": "2025-11-25T02:23:54.422564"
+    },
+    {
+        "accion": "CERRAR",
+        "mensaje": "Simulaci\u00f3n: port\u00f3n cerrado",
+        "fecha": "2025-11-25T02:23:58.488312"
+    }
+]

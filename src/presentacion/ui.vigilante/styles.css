@@ -1,0 +1,39 @@
+body {
+    font-family: Arial;
+    background: #f0f0f5;
+    text-align: center;
+    padding-top: 40px;
+}
+
+h1 {
+    color: #333;
+}
+
+.contenedor {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+}
+
+.abrir {
+    background: #4caf50;
+    color: white;
+}
+
+.cerrar {
+    background: #c62828;
+    color: white;
+}
+
+.estado {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #444;
+}

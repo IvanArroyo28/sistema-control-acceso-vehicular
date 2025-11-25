@@ -1,10 +1,14 @@
-from src.dominio.ports.porton_port import PortonPort
+class SimulatedPortonAdapter:
+    def __init__(self):
+        self.estado = "cerrado"
 
-class SimulatedPortonAdapter(PortonPort):
     def abrir(self):
-        print("🔓 SIMULACIÓN: portón abierto")
+        self.estado = "abierto"
         return True, "Simulación: portón abierto"
 
     def cerrar(self):
-        print("🔒 SIMULACIÓN: portón cerrado")
+        self.estado = "cerrado"
         return True, "Simulación: portón cerrado"
+
+    def obtener_estado(self):
+        return f"Simulación: portón {self.estado}"

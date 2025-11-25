@@ -49,3 +49,7 @@ class ArduinoPortonAdapter(PortonPort):
             return True, "Portón cerrado correctamente"
         except Exception as e:
             return False, f"Error al enviar señal al Arduino: {e}"
+
+    def estado(self):
+    # Lo definiremos cuando conectes el Arduino
+        return False, "estado no disponible en Arduino (sin sensores)"
